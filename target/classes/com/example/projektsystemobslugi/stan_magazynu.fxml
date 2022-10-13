@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projektsystemobslugi.StanMagazynuController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuButton mnemonicParsing="false" text="Grupa Klientow">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#writeListView" text="Wszystkie" />
+                <MenuItem mnemonicParsing="false" onAction="#listForGroupIndy" text="Klienci indywidualni" />
+                  <MenuItem mnemonicParsing="false" onAction="#listForGroupInsty" text="Klienci instytucjonalni" />
+              </items>
+            </MenuButton>
+            <ListView fx:id="stanMagazynu2" prefHeight="250.0" prefWidth="210.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Zamknij" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonUsun" mnemonicParsing="false" onAction="#delete" text="Usun" />
+            <Button fx:id="buttonDodaj" mnemonicParsing="false" onAction="#add" text="Dodaj" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" spacing="4.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label text="Nazwa: " />
+                        <TextField fx:id="nazwaText" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label text="X: " />
+                        <TextField fx:id="xText" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label text="Y: " />
+                        <TextField fx:id="yText" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label text="Cena: " />
+                        <TextField fx:id="cenaText" />
+                     </children></HBox>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label text="Skala: 1:" />
+                        <TextField fx:id="skalaText" />
+                     </children></HBox>
+                  <Label text="Material:" />
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" selected="true" text="Plastik">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioButtons" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Drewno" toggleGroup="$radioButtons" />
+                        <RadioButton mnemonicParsing="false" text="Karton" toggleGroup="$radioButtons" />
+                     </children></HBox>
+               </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </right>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#switchViewMain" text="Powrot" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

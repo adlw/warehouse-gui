@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projektsystemobslugi.ZamowienieController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Zamknij" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#makeOrder" text="Zamow" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding></VBox>
+   </right>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <ListView fx:id="stanMagazynu" prefHeight="250.0" prefWidth="200.0" />
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addToOrder" text=" &gt; " />
+                        <Button mnemonicParsing="false" onAction="#deleteFromOrder" text=" &lt; " />
+                     </children>
+                  </VBox>
+                  <ListView fx:id="orderList" prefHeight="250.0" prefWidth="200.0" />
+               </children></HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" top="10.0" />
+         </padding></VBox>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#switchViewMain" text="Powrot" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin></Button>
+   </bottom>
+</BorderPane>

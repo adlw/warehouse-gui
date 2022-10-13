@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projektsystemobslugi.MainController">
+   <center>
+      <HBox>
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Stan Magazynu">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="stanMagazynu" prefHeight="250.0" prefWidth="210.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openHelp" text="Pomoc" />
+              <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Zamknij" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+         <children>
+            <Button fx:id="buttonMagazyn" mnemonicParsing="false" onAction="#switchViewMagazyn" text="Magazyn" />
+            <Button fx:id="buttonZamowienie" mnemonicParsing="false" onAction="#switchViewOrder" text="Zamowienie" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
